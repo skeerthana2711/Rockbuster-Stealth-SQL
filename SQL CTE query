@@ -1,0 +1,15 @@
+# SQL CTE query
+Used this query to find the top 5 customers.
+
+SELECT A.customer_id,A.first_name, A.last_name,D.country, C.city,
+SUM(E.amount) AS total_payment
+FROM customer A
+INNER JOIN address B ON A.address_id= B.address_id
+INNER JOIN city C ON B.city_id= C.city_id
+INNER JOIN country D ON C.country_id= D.country_id
+INNER JOIN payment E ON A.customer_id = E.customer_id
+WHERE C.city IN('Cape Coral','Santa Brbara dOeste','Memphis','Valparai',
+'Aurora','Halisahar','Bijapur','Usolje-Sibirskoje','Probolinggo','Zhoushan')
+GROUP BY A.customer_id,A.first_name, A.last_name,D.country, C.city
+ORDER BY total_payment DESC
+LIMIT 5;
