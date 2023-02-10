@@ -9,3 +9,5 @@ The objective of this project was to answer business questions in order to drive
 A relational data set that contains information about ROckbuster's film inventory, customers, and payments, among other things.
 
 [Rockbuster DataSet](https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)
+
+View the project viz's here: [Tableau Viz](https://public.tableau.com/app/profile/keerthana.sampath.kumar/viz/ROCKBUSTERSTEALTHPROJECT/Story1)
