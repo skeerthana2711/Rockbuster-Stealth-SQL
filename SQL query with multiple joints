@@ -1,0 +1,15 @@
+SQL query with multiple joints
+Used this query to find the Top 10 movies with highest revenue gain
+
+SELECT A.title ,A.rating,
+C.name AS genre,
+SUM(F.amount) AS total_revenue
+FROM film A
+INNER JOIN film_category B ON A.film_id = B.film_id
+INNER JOIN category C ON B.category_id = C.category_id
+INNER JOIN inventory D ON A.film_id = D.film_id
+INNER JOIN rental E ON D.inventory_id = E.inventory_id
+INNER JOIN payment F ON E.rental_id = F.rental_id
+GROUP BY A.title ,A.rating ,genre
+ORDER BY total_revenue DESC
+LIMIT 10
