@@ -1,4 +1,4 @@
-# SQL CTE query
+SQL CTE query
 Used this query to find the top 5 customers.
 
 SELECT A.customer_id,A.first_name, A.last_name,D.country, C.city,
